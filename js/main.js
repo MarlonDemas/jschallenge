@@ -23,8 +23,10 @@ function makeNegative (number) {
 }
 
 // call your function here
-var number = makeNegative(5);
+var num = prompt("Enter any number and I will make it negative:");
+var number = makeNegative(num);
 console.log(number)
+document.getElementById("negativeNum").innerHTML = number;
 
 
 // 2. Given an array of integers, return a new array with each value doubled.
@@ -43,10 +45,12 @@ function doubleArray(numbers) {
     return nums;
 }
 // call your function here
-var numbers = [1, 2, 3, 4];
+var numbers = prompt("Enter a sequence of numbers separated by comma").split(",")
+// var numbers = [1, 2, 3, 4];
 numbers = doubleArray(numbers);
 
 console.log(numbers);
+document.getElementById("arrayDoubled").innerHTML = numbers;
 
 
  
@@ -55,14 +59,16 @@ console.log(numbers);
 
 // write your function here
 function checkInclude(arr) {
-    x = arr.includes(4);
+    var checking = prompt("Enter a number to see if it is in your array:");
+    x = arr.includes(checking);
 
     return x;
 }
 // call your function here
-var arr = [1,2,3,4];
+var arr = prompt("Enter a sequence of numbers separated by comma").split(",")
 var x = checkInclude(arr);
 console.log(x);
+document.getElementById("checking").innerHTML = x;
 
 // 4. Bonus Exercise 
 // Life isn't always easy as a small word amongst big words. If only they had a code warrior to help them out...
@@ -78,7 +84,7 @@ console.log(x);
 // For the purposes of this exercise, mid-word punctuation counts towards the character limit of a word.
 // e.g: "it's / I'm" should become: "t's / I'M"
 
-var str = "Life isn't always easy as a small word amongst big words.";
+var str = prompt("Enter a sentence and check what happens:");
 var string = str.split(" ");
 for(var i=0; i<string.length;i++){
     if(string[i].length < 4){
@@ -90,5 +96,6 @@ for(var i=0; i<string.length;i++){
 }
 
 console.log(string.join(" "))
+document.getElementById("stringConstruction").innerHTML = string.join(" ");
 
 
