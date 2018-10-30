@@ -46,7 +46,8 @@ function doubleArray(numbers) {
 }
 // call your function here
 var numbers = prompt("Enter a sequence of numbers separated by comma").split(",")
-// var numbers = [1, 2, 3, 4];
+
+
 numbers = doubleArray(numbers);
 
 console.log(numbers);
@@ -67,8 +68,14 @@ function checkInclude(arr) {
 // call your function here
 var arr = prompt("Enter a sequence of numbers separated by comma").split(",")
 var x = checkInclude(arr);
-console.log(x);
-document.getElementById("checking").innerHTML = x;
+if(x){
+    console.log(x);
+    document.getElementById("checking").innerHTML = "The array does contain the number you inserted. " + "This statement is " + x;  
+}
+else{
+    console.log(x);
+    document.getElementById("checking").innerHTML = "The array does not contain the number you inserted. " + "This statement is " + x;
+}
 
 // 4. Bonus Exercise 
 // Life isn't always easy as a small word amongst big words. If only they had a code warrior to help them out...
